@@ -6,6 +6,7 @@ class rvm::passenger::gem ($ruby_version, $version, $proxy_url = undef ) {
       ensure       => $version,
       require      => Rvm_system_ruby[$ruby_version_only],
       ruby_version => $ruby_version,
-      proxy_url    => $proxy_url;
+      proxy_url    => $proxy_url,
+      source       => 'https://rubygems.org',
   }
 }
